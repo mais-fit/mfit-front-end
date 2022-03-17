@@ -1,0 +1,6 @@
+div.KitPanelImage {
+}
+
+div.KitPanelImage > img {
+    border-radius: 5px;
+}
