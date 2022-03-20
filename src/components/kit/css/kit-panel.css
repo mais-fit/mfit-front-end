@@ -1,9 +1,0 @@
-div.KitPanel {
-    background-color: rgb(0, 255, 13);
-    width: 350px;
-    height: 200px;
-    border-radius: 5px;
-    margin: 30px 70px;
-    display: flex;
-    justify-content: center;
-}

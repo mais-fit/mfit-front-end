@@ -1,9 +1,10 @@
-import Kit from "./components/kit/kit"
-
+import FlavorsModal from "./components/modal"
 
 function App() {
   return (
-    <Kit />
+    <div>
+      <FlavorsModal />
+    </div>
   )
 }
 
