@@ -1,0 +1,4 @@
+.BoxKits {
+    display: flex;
+    flex-wrap: wrap;
+}

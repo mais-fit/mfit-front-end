@@ -6,9 +6,11 @@ import Fade from '@mui/material/Fade';
 import Button from '@mui/material/Button';
 import MediaCard from '../card';
 import CloseIcon from '@mui/icons-material/Close';
-
+import kit10 from '../../assets/images/Kit_10.png';
+import kit15 from '../../assets/images/Kit_15.png';
+import kit20 from '../../assets/images/Kit_20.png';
+import kit30 from '../../assets/images/Kit_30.png';
 import './modal.css'
-import { borderRadius } from '@mui/system';
 
 const style = {
   position: 'absolute',
@@ -28,10 +30,15 @@ export default function FlavorsModal() {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
-
   return (
     <div>
-      <Button onClick={handleOpen}>Open modal</Button> {/** Esse botão vai para o exemplo, será retirado do componente mais tarde */}
+      <Box className="BoxKits">
+        <div onClick={handleOpen}><MediaCard imagePath={kit10}/></div>
+        <div onClick={handleOpen}><MediaCard imagePath={kit15}/></div>
+        <div onClick={handleOpen}><MediaCard imagePath={kit20}/></div>
+        <div onClick={handleOpen}><MediaCard imagePath={kit30}/></div>
+      </Box>
+
       <Modal
         aria-labelledby="transition-modal-title"
         aria-describedby="transition-modal-description"
@@ -52,32 +59,32 @@ export default function FlavorsModal() {
               </Box>
 
               <Box className='flavorsPanel' >
-                  <MediaCard />
-                  <MediaCard />
-                  <MediaCard />
-                  <MediaCard />
-                  <MediaCard />
-                  <MediaCard />
-                  <MediaCard />
-                  <MediaCard />
-                  <MediaCard />
-                  <MediaCard />
-                  <MediaCard />
-                  <MediaCard />
-                  <MediaCard />
-                  <MediaCard />
-                  <MediaCard />
-                  <MediaCard />
-                  <MediaCard />
-                  <MediaCard />
-                  <MediaCard />
-                  <MediaCard />
-                  <MediaCard />
-                  <MediaCard />
-                  <MediaCard />
-                  <MediaCard />
-                  <MediaCard />
-                  <MediaCard />
+                  <MediaCard imagePath="https://s2.glbimg.com/zCucirf9qhCtELEw9mHdvE4OZH8=/512x320/smart/e.glbimg.com/og/ed/f/original/2019/01/17/marmita.jpg" />
+                  <MediaCard imagePath="https://s2.glbimg.com/zCucirf9qhCtELEw9mHdvE4OZH8=/512x320/smart/e.glbimg.com/og/ed/f/original/2019/01/17/marmita.jpg" />
+                  <MediaCard imagePath="https://s2.glbimg.com/zCucirf9qhCtELEw9mHdvE4OZH8=/512x320/smart/e.glbimg.com/og/ed/f/original/2019/01/17/marmita.jpg" />
+                  <MediaCard imagePath="https://s2.glbimg.com/zCucirf9qhCtELEw9mHdvE4OZH8=/512x320/smart/e.glbimg.com/og/ed/f/original/2019/01/17/marmita.jpg" />
+                  <MediaCard imagePath="https://s2.glbimg.com/zCucirf9qhCtELEw9mHdvE4OZH8=/512x320/smart/e.glbimg.com/og/ed/f/original/2019/01/17/marmita.jpg" />
+                  <MediaCard imagePath="https://s2.glbimg.com/zCucirf9qhCtELEw9mHdvE4OZH8=/512x320/smart/e.glbimg.com/og/ed/f/original/2019/01/17/marmita.jpg" />
+                  <MediaCard imagePath="https://s2.glbimg.com/zCucirf9qhCtELEw9mHdvE4OZH8=/512x320/smart/e.glbimg.com/og/ed/f/original/2019/01/17/marmita.jpg" />
+                  <MediaCard imagePath="https://s2.glbimg.com/zCucirf9qhCtELEw9mHdvE4OZH8=/512x320/smart/e.glbimg.com/og/ed/f/original/2019/01/17/marmita.jpg" />
+                  <MediaCard imagePath="https://s2.glbimg.com/zCucirf9qhCtELEw9mHdvE4OZH8=/512x320/smart/e.glbimg.com/og/ed/f/original/2019/01/17/marmita.jpg" />
+                  <MediaCard imagePath="https://s2.glbimg.com/zCucirf9qhCtELEw9mHdvE4OZH8=/512x320/smart/e.glbimg.com/og/ed/f/original/2019/01/17/marmita.jpg" />
+                  <MediaCard imagePath="https://s2.glbimg.com/zCucirf9qhCtELEw9mHdvE4OZH8=/512x320/smart/e.glbimg.com/og/ed/f/original/2019/01/17/marmita.jpg" />
+                  <MediaCard imagePath="https://s2.glbimg.com/zCucirf9qhCtELEw9mHdvE4OZH8=/512x320/smart/e.glbimg.com/og/ed/f/original/2019/01/17/marmita.jpg" />
+                  <MediaCard imagePath="https://s2.glbimg.com/zCucirf9qhCtELEw9mHdvE4OZH8=/512x320/smart/e.glbimg.com/og/ed/f/original/2019/01/17/marmita.jpg" />
+                  <MediaCard imagePath="https://s2.glbimg.com/zCucirf9qhCtELEw9mHdvE4OZH8=/512x320/smart/e.glbimg.com/og/ed/f/original/2019/01/17/marmita.jpg" />
+                  <MediaCard imagePath="https://s2.glbimg.com/zCucirf9qhCtELEw9mHdvE4OZH8=/512x320/smart/e.glbimg.com/og/ed/f/original/2019/01/17/marmita.jpg" />
+                  <MediaCard imagePath="https://s2.glbimg.com/zCucirf9qhCtELEw9mHdvE4OZH8=/512x320/smart/e.glbimg.com/og/ed/f/original/2019/01/17/marmita.jpg" />
+                  <MediaCard imagePath="https://s2.glbimg.com/zCucirf9qhCtELEw9mHdvE4OZH8=/512x320/smart/e.glbimg.com/og/ed/f/original/2019/01/17/marmita.jpg" />
+                  <MediaCard imagePath="https://s2.glbimg.com/zCucirf9qhCtELEw9mHdvE4OZH8=/512x320/smart/e.glbimg.com/og/ed/f/original/2019/01/17/marmita.jpg" />
+                  <MediaCard imagePath="https://s2.glbimg.com/zCucirf9qhCtELEw9mHdvE4OZH8=/512x320/smart/e.glbimg.com/og/ed/f/original/2019/01/17/marmita.jpg" />
+                  <MediaCard imagePath="https://s2.glbimg.com/zCucirf9qhCtELEw9mHdvE4OZH8=/512x320/smart/e.glbimg.com/og/ed/f/original/2019/01/17/marmita.jpg" />
+                  <MediaCard imagePath="https://s2.glbimg.com/zCucirf9qhCtELEw9mHdvE4OZH8=/512x320/smart/e.glbimg.com/og/ed/f/original/2019/01/17/marmita.jpg" />
+                  <MediaCard imagePath="https://s2.glbimg.com/zCucirf9qhCtELEw9mHdvE4OZH8=/512x320/smart/e.glbimg.com/og/ed/f/original/2019/01/17/marmita.jpg" />
+                  <MediaCard imagePath="https://s2.glbimg.com/zCucirf9qhCtELEw9mHdvE4OZH8=/512x320/smart/e.glbimg.com/og/ed/f/original/2019/01/17/marmita.jpg" />
+                  <MediaCard imagePath="https://s2.glbimg.com/zCucirf9qhCtELEw9mHdvE4OZH8=/512x320/smart/e.glbimg.com/og/ed/f/original/2019/01/17/marmita.jpg" />
+                  <MediaCard imagePath="https://s2.glbimg.com/zCucirf9qhCtELEw9mHdvE4OZH8=/512x320/smart/e.glbimg.com/og/ed/f/original/2019/01/17/marmita.jpg" />
+                  <MediaCard imagePath="https://s2.glbimg.com/zCucirf9qhCtELEw9mHdvE4OZH8=/512x320/smart/e.glbimg.com/og/ed/f/original/2019/01/17/marmita.jpg" />
               </Box>
               <Box sx={{ display: 'flex', flexDirection: 'row-reverse'}}>
                 <Button sx={{ padding: '10px 30px'}}>Salvar</Button>
