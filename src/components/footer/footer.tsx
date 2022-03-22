@@ -26,7 +26,7 @@ export default function Footer(){
           color="text.secondary"
           component="p"
         >
-          Something here to give the footer a purpose!
+          Mais FIT marmitinhas
         </Typography>
         <Copyright />
     </Box>

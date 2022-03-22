@@ -5,6 +5,7 @@ import Modal from '@mui/material/Modal';
 import Fade from '@mui/material/Fade';
 import Button from '@mui/material/Button';
 import MediaCard from '../card';
+import MediaCardFlavor from '../card/cardflavor';
 import CloseIcon from '@mui/icons-material/Close';
 import kit10 from '../../assets/images/Kit_10.png';
 import kit15 from '../../assets/images/Kit_15.png';
@@ -80,9 +81,10 @@ export default function FlavorsModal() {
                 </Button>
               </Box>
 
+
               <Box className='flavorsPanel' >
                   { flavors.map((flavor: IFlavor) => (
-                    <MediaCard imagePath={flavor.link} />
+                    <MediaCardFlavor imagePath={flavor.link} nameFlavor={flavor.nome} />
                   ))}
               </Box>
               <Box sx={{ display: 'flex', flexDirection: 'row-reverse'}}>
