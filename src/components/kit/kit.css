@@ -1,4 +1,9 @@
 .BoxKits {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+}
+
+.Kit {
+    margin: 55px;
 }

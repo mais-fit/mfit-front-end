@@ -4,10 +4,12 @@ import './card.css'
 
 interface IMediaCard {
   imagePath: string
+  nameFlavor: string
 }
 
-export default function MediaCard(props: IMediaCard) {
-  const imagePath = props.imagePath
+export default function MediaCardFlavor(props: IMediaCard) {
+  const {imagePath, nameFlavor} = props
+  
   return (
     <Card className='flavorCard' sx={{ maxWidth: 500 }}>
       <CardMedia
@@ -16,6 +18,7 @@ export default function MediaCard(props: IMediaCard) {
         image={imagePath}
         alt="green iguana"
       />
+      <div className='flavorName'>{nameFlavor}</div>
     </Card>
   );
 }

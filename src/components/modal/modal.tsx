@@ -57,10 +57,10 @@ export default function FlavorsModal() {
   return (
     <div>
       <Box className="BoxKits">
-        <div onClick={handleOpen}><MediaCard imagePath={kit10}/></div>
-        <div onClick={handleOpen}><MediaCard imagePath={kit15}/></div>
-        <div onClick={handleOpen}><MediaCard imagePath={kit20}/></div>
-        <div onClick={handleOpen}><MediaCard imagePath={kit30}/></div>
+        <div onClick={handleOpen} className="Kit"><MediaCard imagePath={kit10}/></div>
+        <div onClick={handleOpen} className="Kit"><MediaCard imagePath={kit15}/></div>
+        <div onClick={handleOpen} className="Kit"><MediaCard imagePath={kit20}/></div>
+        <div onClick={handleOpen} className="Kit"><MediaCard imagePath={kit30}/></div>
       </Box>
 
       <Modal
