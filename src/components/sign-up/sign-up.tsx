@@ -11,21 +11,32 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Gender from './gender';
 import CPF  from './cpf';
 import CEP from './cep';
+import axios from 'axios';
 
 const theme = createTheme();
 
+const api = axios.create({ 
+  baseURL: 'https://mais-fit.herokuapp.com/',
+})
+
 export default function SignUp() {
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+  const SignUpSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
-    
-
     const data = new FormData(event.currentTarget);
-    
-    console.log({
-      email: data.get('email'),
-      password: data.get('password'),
-    });
+    const formData = {
+      completeName: data.get("completeName"),
+      email: data.get("email"),
+      numero: data.get("numero"),
+      logradouro: data.get("logradouro"),
+      bairro: data.get("bairro"),
+      complemento: data.get("complemento"),
+      password: data.get("password")
+    }
+
+    api.post('/clientes').then(({data}) => {
+      return data
+    })
   };
 
   return (
@@ -42,15 +53,15 @@ export default function SignUp() {
           <Avatar sx={{ m: 1, bgcolor: 'primary.main' }}>
             <LockOutlinedIcon />
           </Avatar>
-          <Box component="form" onSubmit={handleSubmit} sx={{ mt: 3 }}>
+          <Box component="form" onSubmit={SignUpSubmit} sx={{ mt: 3 }}>
             <Grid container spacing={2}>
               <Grid item xs={12}>
                 <TextField
                   autoComplete="given-name"
-                  name="CompleteName"
+                  name="completeName"
                   required
                   fullWidth
-                  id="CompleteName"
+                  id="completeName"
                   label="Nome Completo"
                   autoFocus
                 />
