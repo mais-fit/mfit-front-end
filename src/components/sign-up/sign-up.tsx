@@ -17,6 +17,9 @@ const theme = createTheme();
 
 const api = axios.create({ 
   baseURL: 'https://mais-fit.herokuapp.com/',
+  headers: {
+    'Content-Type': 'application/json'
+  }
 })
 
 export default function SignUp() {
@@ -25,16 +28,21 @@ export default function SignUp() {
 
     const data = new FormData(event.currentTarget);
     const formData = {
-      completeName: data.get("completeName"),
+      nome_completo: data.get("completeName"),
       email: data.get("email"),
       numero: data.get("numero"),
       logradouro: data.get("logradouro"),
       bairro: data.get("bairro"),
       complemento: data.get("complemento"),
-      password: data.get("password")
+      cep: data.get("cep"),
+      cpf: data.get("cpf"),
+      genero: data.get("genero"),
+      nascimento: data.get("birthdate"),
+      celular: data.get("phone"),
+      senha: data.get("password")
     }
 
-    api.post('/clientes').then(({data}) => {
+    api.post('/clientes', formData).then(({data}) => {
       return data
     })
   };
@@ -67,7 +75,7 @@ export default function SignUp() {
                 />
               </Grid>
               <Grid item xs={12}>
-                <Gender  />
+                <Gender />
               </Grid>
               <Grid item xs={12}>
                 <TextField
@@ -81,6 +89,27 @@ export default function SignUp() {
                 />
               </Grid>
               <Grid item xs={12}>
+                <TextField
+                  required
+                  fullWidth
+                  id="date"
+                  name="birthdate"
+                  type="date"
+                  autoComplete="date"
+                />
+              </Grid>
+              <Grid item xs={12} sm={6}>
+                <TextField
+                  required
+                  fullWidth
+                  id="phone"
+                  label="Celular"
+                  name="phone"
+                  type="number"
+                  autoComplete="phone"
+                />
+              </Grid>
+              <Grid item xs={12} sm={6}>
                 <CPF />
               </Grid>
               <Grid item xs={12} sm={6}>
@@ -114,6 +143,7 @@ export default function SignUp() {
                   id="bairro"
                   label="Bairro"
                   name="bairro"
+                  type="text"
                   autoComplete="bairro"
                 />
               </Grid>
@@ -127,7 +157,7 @@ export default function SignUp() {
                   autoComplete="complemento"
                 />
               </Grid>
-              <Grid item xs={12}>
+              <Grid item xs={12} sm={6}>
                 <TextField
                   required
                   fullWidth
@@ -136,6 +166,17 @@ export default function SignUp() {
                   type="password"
                   id="password"
                   autoComplete="new-password"
+                />
+              </Grid>
+              <Grid item xs={12} sm={6}>
+                <TextField
+                  required
+                  fullWidth
+                  name="confirm_password"
+                  label="Confirm Password"
+                  type="password"
+                  id="confirm_password"
+                  autoComplete="new-confirm_password"
                 />
               </Grid>
             </Grid>
