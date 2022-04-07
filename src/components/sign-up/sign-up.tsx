@@ -9,7 +9,7 @@ import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Gender from './gender';
-import CPF  from './cpf';
+import CPF from './cpf';
 import CEP from './cep';
 import axios from 'axios';
 
@@ -41,6 +41,8 @@ export default function SignUp() {
       celular: data.get("phone"),
       senha: data.get("password")
     }
+
+    
 
     api.post('/clientes', formData).then(({data}) => {
       return data
@@ -149,7 +151,6 @@ export default function SignUp() {
               </Grid>
               <Grid item xs={12}>
                 <TextField
-                  required
                   fullWidth
                   id="complemento"
                   label="Complemento"
