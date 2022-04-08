@@ -83,7 +83,7 @@ export default function FlavorsModal() {
 
               <Box className='flavorsPanel' >
                   { flavors.map((flavor: IFlavor) => (
-                    <MediaCardFlavor imagePath={flavor.link} nameFlavor={flavor.nome} />
+                    <MediaCardFlavor key={flavor.id.toString()} imagePath={flavor.link} nameFlavor={flavor.nome} />
                   ))}
               </Box>
               <Box sx={{ display: 'flex', flexDirection: 'row-reverse'}}>
