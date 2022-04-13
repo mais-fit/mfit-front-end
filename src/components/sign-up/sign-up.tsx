@@ -12,6 +12,7 @@ import Gender from './gender';
 import CPF from './cpf';
 import CEP from './cep';
 import axios from 'axios';
+import Birthdate from './birthdate'
 
 const theme = createTheme();
 
@@ -91,14 +92,7 @@ export default function SignUp() {
                 />
               </Grid>
               <Grid item xs={12}>
-                <TextField
-                  required
-                  fullWidth
-                  id="date"
-                  name="birthdate"
-                  type="date"
-                  autoComplete="date"
-                />
+                <Birthdate />
               </Grid>
               <Grid item xs={12} sm={6}>
                 <TextField
