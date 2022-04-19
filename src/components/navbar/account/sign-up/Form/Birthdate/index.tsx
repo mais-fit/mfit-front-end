@@ -5,7 +5,7 @@ import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 
-export default function Birthdate() {
+export function SignUpBirthdate() {
   const [value, setValue] = React.useState<Date | null>(new Date());
 
   return (
