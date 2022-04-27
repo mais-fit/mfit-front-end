@@ -16,7 +16,7 @@ import { SignupPhone } from "./Phone";
 import { SignUpSubmitButton } from "./SubmitButton";
 
 const api = axios.create({
-    baseURL: 'https://mais-fit.herokuapp.com/',
+    baseURL: 'https://mais-fit-project-v2.herokuapp.com/',
     headers: {
         'Content-Type': 'application/json'
     }

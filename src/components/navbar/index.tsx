@@ -4,6 +4,7 @@ import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import { AccountButton } from './account';
+import { CartButton } from './cart';
 
 export function Navbar() {
 
@@ -15,6 +16,7 @@ export function Navbar() {
             <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
               MFIT
             </Typography>
+            <CartButton />
             <AccountButton />
           </Toolbar>
         </AppBar>

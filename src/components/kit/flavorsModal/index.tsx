@@ -16,9 +16,8 @@ import { IFlavor } from './index.types';
 import axios from 'axios';
 
 const api = axios.create({ 
-  baseURL: 'https://mais-fit.herokuapp.com/',
+  baseURL: 'https://mais-fit-project-v2.herokuapp.com/',
 })
-
 
 export default function FlavorsModal() {
 
@@ -63,7 +62,7 @@ export default function FlavorsModal() {
 
                     <Box sx={flavorsPanel}>
                         { flavors.map((flavor: IFlavor) => (
-                            <MediaCardFlavor imagePath={flavor.link} nameFlavor={flavor.nome} />
+                            <MediaCardFlavor key={flavor.id} imagePath={flavor.link} nameFlavor={flavor.nome} />
                         ))}
                     </Box>
                     <Box sx={{ display: 'flex', flexDirection: 'row-reverse'}}>
